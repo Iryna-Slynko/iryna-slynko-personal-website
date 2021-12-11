@@ -1,8 +1,12 @@
 import React from 'react';
+import Education from './Education';
+import Work from './Work';
 
 export default function Portfolio() {
   return (
-    <div id='portfolio'>
-    </div>
+    <section id='resume'>
+      <Work />
+      <Education />
+    </section>
   )
 }

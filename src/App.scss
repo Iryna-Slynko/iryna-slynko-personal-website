@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+@import "styles/Colours.scss";
+@import "styles/Navbar.scss";
+@import "styles/Fonts.scss";
+
+$primary: $accent-color;
+
+@import "~bootstrap/scss/bootstrap";
+
+

@@ -1,0 +1,45 @@
+$navbar-dark-color:                 $white;
+$navbar-dark-hover-color:           rgba($white, .75);
+$navbar-dark-active-color:          $accent-color;
+$navbar-dark-disabled-color:        rgba($white, .25);
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color:  rgba($white, .1);
+
+$navbar-dark-brand-color:                 $navbar-dark-color;
+$navbar-dark-brand-hover-color:           $navbar-dark-active-color;
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+  border-bottom: 4px solid $accent-color;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  border-bottom: 4px solid transparent ;
+}
+
+nav.bg-dark {
+  background-color: $header-color;
+}
+
+nav {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+nav .nav-link {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2.5px;
+}
+
+/* small screens. bootstrap - sm */
+@media only screen and (max-width: 540px) {
+  .navbar-dark .navbar-nav .nav-link {
+    margin-left: 30%;
+    margin-right: 30%
+  } 
+}
+@media only screen and (max-width: 300px) {
+  .navbar-dark .navbar-nav .nav-link {
+    margin-left: 0%;
+    margin-right: 0%
+  } 
+}

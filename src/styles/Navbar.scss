@@ -26,18 +26,22 @@ nav {
 }
 
 nav .nav-link {
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 2.5px;
+  font-family: $header-font;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
 }
 
 /* small screens. bootstrap - sm */
 @media only screen and (max-width: 540px) {
+  /* make lines fit under the menu item */
   .navbar-dark .navbar-nav .nav-link {
     margin-left: 30%;
     margin-right: 30%
   } 
 }
+
 @media only screen and (max-width: 300px) {
+  /*the menu items are small now, so make the line be screen width */
   .navbar-dark .navbar-nav .nav-link {
     margin-left: 0%;
     margin-right: 0%

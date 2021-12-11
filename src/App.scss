@@ -2,10 +2,15 @@
 @import "~bootstrap/scss/variables";
 
 @import "styles/Colours.scss";
-@import "styles/Navbar.scss";
 @import "styles/Fonts.scss";
+@import "styles/Navbar.scss";
+@import "styles/About.scss";
 
 $primary: $accent-color;
+
+p {
+  line-height: 2;
+}
 
 @import "~bootstrap/scss/bootstrap";
 

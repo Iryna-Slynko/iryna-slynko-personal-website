@@ -9,7 +9,7 @@ export default function Education() {
     const title = education.universityName;
     const subtitle = education.diploma;
     const extraText = "";
-    return generateAccordionItem(index, title, subtitle, date, extraText);
+    return generateAccordionItem('education', index, title, subtitle, date, extraText);
   })
   return (
     generateAccordion('education', 'Education', experience)

@@ -15,7 +15,7 @@ export default function Work() {
     const title = work.companyName;
     const subtitle = work.position;
     const extraText = work.responsibilities;
-    return generateAccordionItem(index, title, subtitle, date, extraText);
+    return generateAccordionItem('work', index, title, subtitle, date, extraText);
   })
   return (
     generateAccordion('experience', 'Experience', experience)

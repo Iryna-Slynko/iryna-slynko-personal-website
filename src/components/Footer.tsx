@@ -45,12 +45,18 @@ export default function Footer() {
   return (
     <footer>
       <Container>
-        <Row>
+        <Row  className="justify-content-md-center">
+          <Col xs={3}></Col>
           <Col>
       <ul>
         {networks}
       </ul>
       </Col>
+      <Col xs={3}></Col>
+
+      </Row>
+      <Row  className="justify-content-md-center">
+      © Copyright 2021 Iryna Slynko
       </Row>
       </Container>
     </footer>

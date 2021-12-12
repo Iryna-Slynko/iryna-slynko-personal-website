@@ -18,7 +18,7 @@ export default function Work() {
     return generateAccordionItem(index, title, subtitle, date, extraText);
   })
   return (
-    generateAccordion('work', 'Work', experience)
+    generateAccordion('experience', 'Experience', experience)
   )
 }
 

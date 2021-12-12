@@ -11,7 +11,7 @@ export default function About() {
       <Container>
       <Row>
 <Col xs={6} md={4} lg={2}>
-      <Image src="main-photo.jfif" roundedCircle fluid className='profile-pic' alt='Iryna Slynko'/>
+      <Image src="images/main-photo.jfif" roundedCircle fluid className='profile-pic' alt='Iryna Slynko'/>
       </Col>
       <Col>
       <h2 className='justify'>

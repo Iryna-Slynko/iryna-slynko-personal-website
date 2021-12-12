@@ -65,7 +65,7 @@ function ContextAwareToggle(params: IParams) {
 export function generateAccordionItem(prefix: string, index: number, title: string, subtitle: string, date: string, extraText: string): JSX.Element {
 
   return  <Accordion.Item key={title} eventKey={prefix + '-' + index.toString()}>
-  <ContextAwareToggle subtitle={date} eventKey={index.toString()}>{title}</ContextAwareToggle>
+  <ContextAwareToggle subtitle={date} eventKey={prefix + '-' + index.toString()}>{title}</ContextAwareToggle>
   <Accordion.Body>
     <h6>
       <span className='title'>
@@ -79,22 +79,5 @@ export function generateAccordionItem(prefix: string, index: number, title: stri
     </p>
   </Accordion.Body>
 </Accordion.Item>
-/*   <Card>
-  <Card.Header className='accordion-header'>
-    <ContextAwareToggle eventKey={index.toString()}>{title}</ContextAwareToggle>
-  </Card.Header>
-  <Accordion.Collapse eventKey={index.toString()}>
-    <Card.Body>
-    <h6>
-      <span className='title'>
-        {subtitle}</span><span>•</span>
-      <span className='date'>
-        {date}
-      </span>
-    </h6>
-    <p>
-      {extraText}
-    </p>      </Card.Body>
-  </Accordion.Collapse>
-</Card>*/ ;
+;
 }

@@ -4,7 +4,7 @@ import { generateAccordion, generateAccordionItem } from './generateAccordion';
 
 export default function Work() {
   const experience = WorkExperience().map(function (work, index) {
-    let date = format(work.startDate, "MMM yyyy");
+    let date = format(work.startDate, "MMM yyyy") + " - ";
     switch (work.endDate) {
       case 'Present':
         date += "Present";

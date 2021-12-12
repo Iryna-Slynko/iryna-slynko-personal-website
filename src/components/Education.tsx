@@ -1,6 +1,4 @@
 import { format } from 'date-fns';
-import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
 
 import EducationExperience from '../data/EducationExperience';
 import { generateAccordion, generateAccordionItem } from './generateAccordion';

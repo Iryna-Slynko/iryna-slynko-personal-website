@@ -4,7 +4,7 @@ h6 span {
   line-height: inherit;
 }
 
-main h2, main h5 {
+main h2, main h5, main .h5 {
   font-weight: 600;
 }
 main h2, main h6 {
@@ -23,4 +23,8 @@ main h4 {
 main section {
   padding-bottom: 1em;
   padding-top: 1em;
+}
+
+.accordion-button .date {
+  color: $text-color;
 }

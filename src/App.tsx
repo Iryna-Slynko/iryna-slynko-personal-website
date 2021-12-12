@@ -21,18 +21,17 @@ library.add(
 
 function App() {
   return (
-    <>
-
+    <div id='home'>
+      <About />
       <Header />
       <main>
-        <About />
         <Container>
         <Resume />
         <Hobbies />
         </Container>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

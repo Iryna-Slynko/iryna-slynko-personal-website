@@ -3,7 +3,7 @@ import Navigation from './Navigation'
 
 export default function Header() {
   return (
-    <header id='home'>
+    <header className='affix-top' data-spy='affix'>
       <Navigation />
     </header>
   )

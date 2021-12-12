@@ -1,30 +1,25 @@
 import { format } from 'date-fns';
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-
 import WorkExperience from '../data/WorkExperience';
+import { generateAccordion, generateAccordionItem } from './generateAccordion';
 
 export default function Work() {
-  const experience = WorkExperience().map(function(work) {
-
-    return (<Card>
-      <Card.Body>
-        <Card.Title>
-          {work.position} at
-        </Card.Title>
-        <Card.Subtitle>
-          {work.companyName}<span>•</span>
-          <em className='date'>
-          {format(work.startDate, "MMM yyyy")} - { work.endDate === "Present" ? work.endDate : format(work.endDate, "MMM yyyy") }
-          </em>
-        </Card.Subtitle>
-
-      </Card.Body>
-    </Card>);
+  const experience = WorkExperience().map(function (work, index) {
+    let date = format(work.startDate, "MMM yyyy");
+    switch (work.endDate) {
+      case 'Present':
+        date += "Present";
+        break;
+      default:
+        date += format(work.endDate, "MMM yyyy");
+    }
+    const title = work.companyName;
+    const subtitle = work.position;
+    const extraText = work.responsibilities;
+    return generateAccordionItem(index, title, subtitle, date, extraText);
   })
   return (
-    <section id='work'>
-    {experience}
-    </section>
+    generateAccordion('work', 'Work', experience)
   )
 }
+
+

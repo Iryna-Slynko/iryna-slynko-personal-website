@@ -1,0 +1,26 @@
+h6 span {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+main h2, main h5 {
+  font-weight: 600;
+}
+main h2, main h6 {
+  margin-bottom: 1em;  
+}
+
+main h4 {
+  padding: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 3px solid $secondary-accent-color;
+  padding-bottom: 6px;
+  font-size: medium;
+}
+
+main section {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}

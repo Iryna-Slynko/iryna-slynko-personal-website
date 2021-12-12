@@ -11,7 +11,9 @@ export function generateAccordion(id: string, title: string, experience: JSX.Ele
     <Row>
       <Col xs={3} md={2}>
         <h4>
-          {title}
+          <span>
+            {title}
+          </span>
         </h4>
       </Col>
       <Col>

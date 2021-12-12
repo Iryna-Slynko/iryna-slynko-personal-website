@@ -15,9 +15,14 @@ main h4 {
   padding: 1em;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 3px solid $secondary-accent-color;
   padding-bottom: 6px;
   font-size: medium;
+}
+
+main h4 span {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  border-bottom: 3px solid $secondary-accent-color;
 }
 
 main section {

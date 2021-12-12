@@ -3,7 +3,6 @@ import './App.scss';
 import About from './components/About';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       <main>
         <About />
         <Resume />
-        <Portfolio />
       </main>
       <Footer />
     </div>

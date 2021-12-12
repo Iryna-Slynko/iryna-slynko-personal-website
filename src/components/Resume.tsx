@@ -1,8 +1,12 @@
 import React from 'react';
+import Education from './Education';
+import Work from './Work';
 
 export default function Resume() {
   return (
-    <div id='resume'>
-    </div>
+    <section id='resume'>
+      <Work />
+      <Education />
+    </section>
   )
 }

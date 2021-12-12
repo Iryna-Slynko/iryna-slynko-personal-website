@@ -2,11 +2,13 @@ import React from 'react';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 
 export default function About() {
   return (
     <section id='about'>
+      <Container>
       <Row>
 <Col xs={6} md={4} lg={2}>
       <Image src="main-photo.jfif" roundedCircle fluid className='profile-pic' alt='Iryna Slynko'/>
@@ -27,6 +29,7 @@ export default function About() {
       </p>
       </Col>
     </Row>
+    </Container>
     </section>
   )
 }

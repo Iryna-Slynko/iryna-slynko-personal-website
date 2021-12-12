@@ -1,0 +1,22 @@
+footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: $footer-color;
+  background-color: $footer-background-color;
+  text-align: center;
+  position: relative;
+}
+
+footer a, footer a:visited {
+  color: $inactive-accent-color;
+}
+
+footer ul {
+  list-style: none outside;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}

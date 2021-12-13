@@ -42,15 +42,9 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  #navigation {
-    background-color: transparent;
-  }
+  z-index: 4;
 }
 
-.sticky + .content {
-  z-index: 1;
+.sticky + main {
   padding-top: 60px;
-  .bg-dark {
-    background-color: inherit;
-  }
 }

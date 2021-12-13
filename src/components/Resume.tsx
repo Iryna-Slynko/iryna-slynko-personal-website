@@ -1,5 +1,6 @@
 import React from 'react';
 import { IInfo } from '../types/Info';
+import { Technology } from '../types/Technology';
 import Education from './Education';
 import Projects from './Projects';
 import Skills from './Skills';
@@ -9,20 +10,32 @@ interface IProps {
   readonly info: IInfo,
 }
 
+interface IState {
+  selectedSkill: Technology | null;
+}
 
-export default class Resume extends React.Component<IProps, IInfo> {
+export default class Resume extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
-    this.state = props.info;
+    this.state = {selectedSkill: null};
+    this.onSelectingItem = this.onSelectingItem.bind(this);
+  }
+
+  onSelectingItem(skill: Technology) {
+    if (skill === this.state.selectedSkill) {
+      this.setState({selectedSkill: null});
+    } else {
+      this.setState({selectedSkill: skill});
+    }
   }
 
   render(): React.ReactNode {
     return (
       <section id='resume'>
-        <Skills skills={this.state.skills} />
-        <Work jobs={this.state.jobs} />
-        <Education education={this.state.education} />
-        <Projects projects={this.state.projects} />
+        <Skills skills={this.props.info.skills} selectedSkill={this.state.selectedSkill} />
+        <Work jobs={this.props.info.jobs} />
+        <Education education={this.props.info.education} />
+        <Projects projects={this.props.info.projects} />
       </section>
     )
   }

@@ -27,8 +27,8 @@ const hero = <section className="hero bg-dark">
 function App() {
   return (
     <div id='home'>
-      {hero}
       <Header />
+      {hero}
       <div>
         <main>
           <About />

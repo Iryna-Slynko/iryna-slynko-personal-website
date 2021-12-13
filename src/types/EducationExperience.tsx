@@ -3,7 +3,12 @@ export interface IEducationExperience {
   readonly website: URL;
   readonly diploma: string;
   readonly graduationDate: Date;
-  readonly modules: IModule[];
+  readonly stages: IStage[]
+}
+
+interface IStage {
+  readonly stageName: string
+  readonly modules:  IModule[]
 }
 interface IModule {
   readonly title: string;

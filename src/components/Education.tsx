@@ -5,7 +5,7 @@ import { generateAccordion, generateAccordionItem } from './generateAccordion';
 
 export default function Education() {
   const experience = EducationExperience().map(function (education, index) {
-    const date = (education.graduationDate > new Date() ? "expected in " : "") + format(education.graduationDate, "MMMM yyyy");
+    const date = (education.graduationDate > new Date() ? "expected in " : "") + format(education.graduationDate, "yyyy");
     const title = education.universityName;
     const subtitle = education.diploma;
     const extraText = "";

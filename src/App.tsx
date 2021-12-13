@@ -19,18 +19,26 @@ library.add(
   faHome
 )
 
+const hero = <section className="hero bg-dark">
+</section>;
+
 function App() {
   return (
+
     <div id='home'>
-      <About />
+
+      {hero}
       <Header />
-      <main>
-        <Container>
-        <Resume />
-        <Hobbies />
-        </Container>
-      </main>
-      <Footer />
+      <div>
+        <About />
+        <main>
+          <Container>
+            <Resume />
+            <Hobbies />
+          </Container>
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

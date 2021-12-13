@@ -17,7 +17,40 @@ p {
 body {
   position: relative;
 }
+#projects .carousel-item img {
+  max-height: 250px;
+}
+
+#projects .carousel-caption {
+  position: inherit;
+}
 
 @import "~bootstrap/scss/bootstrap";
 
 
+.hero {
+  height: 100vh;
+  justify-content: center;
+  background: url(./images/hero6.jpg);
+  filter: grayscale(1);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  #navigation {
+    background-color: transparent;
+  }
+}
+
+.sticky + .content {
+  z-index: 1;
+  padding-top: 60px;
+  .bg-dark {
+    background-color: inherit;
+  }
+}

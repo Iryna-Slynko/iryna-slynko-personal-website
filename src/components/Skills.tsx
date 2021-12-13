@@ -32,8 +32,8 @@ export default class Skills extends React.Component<IProps> {
     return (
       <section id='skills'>
         <Container>
-          <Row className="justify-content-md-center">
-            <Col sm={3} md={2}>
+          <Row className="justify-content-center">
+            <Col className="pb-5" sm={3} md={2}>
               <h4>
                 <span>
                   Skills

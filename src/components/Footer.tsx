@@ -58,6 +58,9 @@ export default function Footer() {
       <Row  className="justify-content-md-center">
       © Copyright 2021 Iryna Slynko
       </Row>
+      <Row  className="justify-content-md-center">
+      Fuelled by coffee ☕ and 🏋️
+      </Row>
       </Container>
     </footer>
   )

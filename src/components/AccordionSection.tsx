@@ -1,13 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Accordion from 'react-bootstrap/Accordion';
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
-import AccordionContext from 'react-bootstrap/AccordionContext';
-import Container from 'react-bootstrap/Container';
 
-export function generateAccordion(id: string, title: string, experience: JSX.Element[]) {
-}
 
 interface IProps {
   id: string,
@@ -34,42 +29,3 @@ export class AccordionSection  extends React.Component<IProps> {
   </section>;
   }
 }
-
-interface IParams {
-  children: string,
-  eventKey: string,
-  subtitle: string
-}
-export function ContextAwareToggle(params: IParams) {
-  const { activeEventKey } = useContext(AccordionContext);
-
-  const decoratedOnClick = useAccordionButton(
-    params.eventKey,
-    () => { },
-  );
-
-  const isCurrentEventKey = activeEventKey === params.eventKey;
-
-  return (
-    <button
-      type="button"
-      className="accordion-button collapsed"
-      onClick={decoratedOnClick}
-    >
-      <Container>
-        <Row>
-          <Col xs={6} className='h5'>
-            {params.children}
-          </Col>
-          <Col xs={6} className='text-end h6'>
-            <span className='date'>
-              {isCurrentEventKey ? "" : params.subtitle}
-            </span>
-          </Col>
-        </Row>
-      </Container>
-    </button>
-  );
-}
-
-

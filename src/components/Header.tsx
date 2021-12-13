@@ -3,7 +3,7 @@ import Navigation from './Navigation'
 
 export default function Header() {
   return (
-    <header className='sticky'>
+    <header className='sticky '>
       <Navigation />
     </header>
   )

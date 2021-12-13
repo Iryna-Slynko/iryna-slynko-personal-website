@@ -1,16 +1,4 @@
-import { Practice } from "../types/Practice";
-import { Technology } from "../types/Technology";
-
-interface IWorkExperience {
-  readonly companyName: string,
-  readonly website: URL,
-  readonly position: string,
-  readonly startDate: Date,
-  readonly endDate: Date | 'Present',
-  readonly technologies: Technology[],
-  readonly practices: Practice[],
-  readonly responsibilities: string
-}
+import { IWorkExperience } from "../types/WorkExperience";
 
 export default function WorkExperience(): IWorkExperience[] {
   return [{

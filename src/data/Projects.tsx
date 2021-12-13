@@ -1,12 +1,5 @@
-import { Technology } from "../types/Technology";
+import { IProject } from "../types/Project";
 
-interface IProject {
-  technologies: Technology[];
-  title: string;
-  description: string;
-  image: string;
-  url: string;
-}
 export default function ProjectsData(): IProject[] {
   return [
     {

@@ -9,21 +9,13 @@ import { Technology } from '../types/Technology';
 interface IProps {
   readonly skills: ISkillInfo[]
   selectedSkill: Technology | null
+  onSkillChange: (skill: Technology) => void
 }
 
 export default class Skills extends React.Component<IProps> {
   constructor(props: IProps) {
     super(props);
-    this.setActiveSkills = this.setActiveSkills.bind(this);
     this.state = { selectedSkill: null };
-  }
-
-  setActiveSkills(skillName: Technology) {
-    /*if (this.state.selectedSkill === skillName) {
-      this.setState({ selectedSkill: null });
-    } else {
-      this.setState({ selectedSkill: skillName });
-    }*/
   }
 
   render(): React.ReactNode {
@@ -31,7 +23,7 @@ export default class Skills extends React.Component<IProps> {
       const spanClassName = skill.skill.toLowerCase() + ' level-' + skill.level.toString();
       const liClassName = skill.skill === this.props.selectedSkill ? "selected" : "";
       return (
-        <li onClick={()=>{this.setActiveSkills(skill.skill)}} className={liClassName} key={skill.skill + liClassName}>
+        <li onClick={()=>{this.props.onSkillChange(skill.skill)}} className={liClassName} key={skill.skill + liClassName}>
           <span className={spanClassName}></span><em>{skill.skill}</em>
         </li>
       );

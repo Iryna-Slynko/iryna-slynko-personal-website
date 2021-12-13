@@ -7,13 +7,18 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 interface IProps {
-  prefix: string; index: number; title: string; subtitle: string; date: string;
+  prefix: string;
+  index: number;
+  title: string;
+  subtitle: string;
+  date: string;
+  selected?: boolean;
 }
 
 export class MyAccordionItem extends React.Component<IProps> {
 
   render() {
-    return <Accordion.Item key={this.props.title} eventKey={this.props.prefix + '-' + this.props.index.toString()}>
+    return <Accordion.Item className={this.props.selected? "selected" : ""} key={this.props.title + this.props.selected ? "selected" : ""} eventKey={this.props.prefix + '-' + this.props.index.toString()}>
       <ContextAwareToggle subtitle={this.props.date} eventKey={this.props.prefix + '-' + this.props.index.toString()}>{this.props.title}</ContextAwareToggle>
       <Accordion.Body>
         <h6>

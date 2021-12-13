@@ -8,14 +8,10 @@ import { Technology } from '../types/Technology';
 
 interface IProps {
   readonly projects: IProject[],
+  selectedSkill: Technology | null
 }
 
-interface IState {
-  selectedSkill?: Technology
-}
-
-
-export default class Projects extends React.Component<IProps, IState> {
+export default class Projects extends React.Component<IProps> {
   render(): React.ReactNode {
     const projectItems = this.props.projects.map((project, index) => {
       return <Carousel.Item key={project.title}>

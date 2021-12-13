@@ -33,3 +33,9 @@ main section {
 .accordion-button .date {
   color: $text-color;
 }
+
+.selected.accordion-item {
+  h5 {
+    color: $accent-color;
+  }
+}

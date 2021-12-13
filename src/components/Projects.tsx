@@ -22,10 +22,18 @@ export default function Projects() {
   });
   return (
     <section id='projects'>
+   
       <Container>
          <Row  className="justify-content-md-center">
+       <Col xs={3} md={2}>
+        <h4>
+          <span>
+            Projects
+          </span>
+        </h4>
+      </Col>
           <Col>
-      <Carousel>
+      <Carousel variant='dark'>
         {projects}
       </Carousel>
       </Col>

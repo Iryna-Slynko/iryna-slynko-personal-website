@@ -30,8 +30,8 @@ function App() {
       {hero}
       <Header />
       <div>
-        <About />
         <main>
+        <About />
           <Container>
             <Resume />
             <Hobbies />

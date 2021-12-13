@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function Navigation() {
   return (
-    <Navbar id='navigation' expand="sm" bg="dark" variant='dark' className='justify-content-end' fixed='top'>
+    <Navbar id='navigation' expand="sm" bg="dark" variant='dark' className='justify-content-end'>
         <Navbar.Toggle aria-controls="basic-navbar-nav"  className='justify-content-end'/>
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-center'>
           <Nav>

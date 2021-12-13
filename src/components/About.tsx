@@ -3,6 +3,7 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import myphoto from "../images/hero10.jpg"
+import { Button } from 'react-bootstrap';
 
 export default function About() {
   return (
@@ -25,6 +26,13 @@ export default function About() {
       <br />
       I would love to take part in projects that would be challenging enough and help me grow my skills.
       </p>
+      <Row>
+        <Col>
+        </Col>
+        <Col>
+          <Button variant="secondary" href="Iryna-Slynko.pdf" target='_blank'>Download My Resume</Button>
+        </Col>
+      </Row>
       </Col>
     </Row>
     </section>

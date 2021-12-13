@@ -11,7 +11,7 @@ interface IProps {
 
 export default function Skills(props:IProps) {
   const skills = props.skills.map((skill) => {
-    const className = 'bar-expand ' + skill.skill.toLowerCase() + 'level-' + skill.level.toString();
+    const className = skill.skill.toLowerCase() + ' level-' + skill.level.toString();
     return (
       <li key={skill.skill}>
         <span className={className}></span><em>{skill.skill}</em>
@@ -30,7 +30,7 @@ export default function Skills(props:IProps) {
               </span>
             </h4>
           </Col>
-          <Col>
+          <Col className='bars'>
             {skills}
           </Col>
         </Row>

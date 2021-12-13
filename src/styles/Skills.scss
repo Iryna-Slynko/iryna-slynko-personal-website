@@ -1,0 +1,47 @@
+.bars ul {
+  list-style: none;
+}
+
+.bars li {
+  position: relative;
+  margin-bottom: 60px;
+  background: rgb(153, 151, 151);
+  height: 20px;
+  border-radius: 3px;
+
+  span {
+    background-color: $data-color;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding-right: 24px;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 3px;
+  }
+
+  @for $i from 1 through 9 {
+    span.level-#{$i} {
+      width: #{$i*10%}
+    }
+  }
+
+
+  em {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: $footer-background-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    position: relative;
+    top: -36px;
+  }
+}
+
+#skills {
+  padding-top: 5em;
+}

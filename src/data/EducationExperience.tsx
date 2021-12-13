@@ -69,10 +69,7 @@ export default function EducationExperience(): IEducationExperience[] {
         title:"Client-side Web Development",
         grade: "A"
       },
-         {
-        title:"Computer Architecture",
-        grade: "B+"
-      },
+         
          {
         title:"Networking Fundamentals",
         grade: "B"
@@ -120,14 +117,7 @@ export default function EducationExperience(): IEducationExperience[] {
         title:"Cloud Services/Distributed Systems",
         grade: "A"
       },
-         {
-        title:"Networking Fundamentals",
-        grade: "B"
-      },
-         {
-        title:"Visual Design and User Experience",
-        grade: "B"
-      },
+         
          {
         title:"Operating Systems",
         grade: "B-"

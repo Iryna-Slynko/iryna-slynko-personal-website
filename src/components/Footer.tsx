@@ -55,12 +55,13 @@ export default function Footer() {
       <Col xs={3}></Col>
 
       </Row>
+<Row  className="justify-content-md-center">
+      Made with ❤️. Fuelled by coffee ☕ and 🏋️
+      </Row>
       <Row  className="justify-content-md-center">
       © Copyright 2021 Iryna Slynko
       </Row>
-      <Row  className="justify-content-md-center">
-      Fuelled by coffee ☕ and 🏋️
-      </Row>
+      
       </Container>
     </footer>
   )

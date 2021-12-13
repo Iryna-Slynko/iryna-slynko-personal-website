@@ -12,5 +12,5 @@ interface IStage {
 }
 interface IModule {
   readonly title: string;
-  readonly grade?: "A" | "A-" | "B+" | "B" | "B-";
+  readonly grade?: "A" | "A-" | "B+" | "B" | "B-"| "Pass" | "Ongoing";
 }

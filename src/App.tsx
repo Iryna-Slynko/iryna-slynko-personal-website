@@ -14,6 +14,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome
 } from '@fortawesome/free-solid-svg-icons'
+import MyInfo from './data/MyInfo';
 
 library.add(
   fab,
@@ -32,7 +33,7 @@ function App() {
         <main>
           <About />
           <Container>
-            <Resume />
+            <Resume info={MyInfo()} />
             <Hobbies />
           </Container>
         </main>

@@ -1,19 +1,29 @@
 import React from 'react';
-import EducationExperience from '../data/EducationExperience';
-import ProjectsData from '../data/Projects';
-import WorkExperience from '../data/WorkExperience';
+import { IInfo } from '../types/Info';
 import Education from './Education';
 import Projects from './Projects';
 import Skills from './Skills';
 import Work from './Work';
 
-export default function Resume() {
-  return (
-    <section id='resume'>
-      <Skills />
-      <Work jobs={WorkExperience()} />
-      <Education education={EducationExperience()} />
-      <Projects projects={ProjectsData()} />
-    </section>
-  )
+interface IProps {
+  readonly info: IInfo,
+}
+
+
+export default class Resume extends React.Component<IProps, IInfo> {
+  constructor(props: IProps) {
+    super(props);
+    this.state = props.info;
+  }
+
+  render(): React.ReactNode {
+    return (
+      <section id='resume'>
+        <Skills />
+        <Work jobs={this.state.jobs} />
+        <Education education={this.state.education} />
+        <Projects projects={this.state.projects} />
+      </section>
+    )
+  }
 }

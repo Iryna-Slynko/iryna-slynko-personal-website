@@ -10,7 +10,7 @@ interface INetwork {
 }
 
 export default function Footer() {
-  const networkData:INetwork[] = [{
+  const networkData: INetwork[] = [{
     name: "twitter",
     url: "http://twitter.com/IRYNAS14/",
     className: ["fab", "twitter"]
@@ -38,30 +38,30 @@ export default function Footer() {
   const networks = networkData.map(function (network) {
     return <li key={network.name}>
       <a title={network.name} href={network.url} target="_blank" rel="noreferrer">
-        <FontAwesomeIcon  icon={network.className} />
+        <FontAwesomeIcon icon={network.className} />
       </a>
     </li>;
   })
   return (
     <footer>
       <Container>
-        <Row  className="justify-content-md-center">
-          <Col xs={3}></Col>
+        <Row className="justify-content-center">
+          <Col sm={2} md={3} className="d-none d-sm-block"></Col>
           <Col>
-      <ul>
-        {networks}
-      </ul>
-      </Col>
-      <Col xs={3}></Col>
+            <ul>
+              {networks}
+            </ul>
+          </Col>
+          <Col sm={2} md={3}  className="d-none d-sm-block"></Col>
 
-      </Row>
-<Row  className="justify-content-md-center">
-      Made with ❤️. Fuelled by ☕ and 🏋️
-      </Row>
-      <Row  className="justify-content-md-center">
-      © Copyright 2021 Iryna Slynko
-      </Row>
-      
+        </Row>
+        <Row className="justify-content-center">
+          Made with ❤️. Fuelled by ☕ and 🏋️
+        </Row>
+        <Row className="justify-content-center">
+          © Copyright 2021 Iryna Slynko
+        </Row>
+
       </Container>
     </footer>
   )

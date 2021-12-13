@@ -18,14 +18,14 @@ export default function About() {
         About Me
       </h2>
       <p>
-      My name is Iryna Slynko. I am a final year computing student at Technological University Dublin, on track for 2:1 BSc&nbsp;Hons degree,
-      and a Software Development student at National College of Ireland, studying towards Higher Diploma in Science in Software Development (Java).
+      Hi! My name is Iryna Slynko. I am a final year Computing student at Technological University Dublin as well as Level 8
+      Software Development student at National College of Ireland graduating in spring 2022.
       <br />
-      I have strong skills in Python, C# and SQL as well as learning Java, JavaScript, Node.js and Flask in current studies and upskilling to become a Full-Stack Software Engineer.
+      I have strong skills in Python, C#, JavaScript and SQL as well as learning Java, Spring Boot, Node.js, ReactJS, DevOps, GitOps and Cloud Computing.
       <br />
-      I possess excellent communication, people and empathy skills with a Bachelors degree in Psychology. I am a great team player as well as initiative individual contributor.
+      I possess excellent communication and people skills with a Bachelors degree in Psychology. I am a great team player as well as being an initiative individual contributor.
       <br />
-      I love elevating others and take pride in my high work ethics.
+      I would love to take part in projects that would be challenging enough and help me grow my skills.
       </p>
       </Col>
     </Row>

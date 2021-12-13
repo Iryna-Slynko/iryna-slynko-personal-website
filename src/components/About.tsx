@@ -2,15 +2,13 @@ import React from 'react';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import myphoto from "../images/hero10.jpg"
 
 export default function About() {
   return (
     <section id='about'>
-      <Container>
       <Row>
-<Col xs={6} md={4} lg={2}>
+      <Col className="d-none d-sm-block align-content-center" sm={6} md={4} lg={2}>
       <Image src={myphoto} roundedCircle fluid className='profile-pic' alt='Iryna Slynko'/>
       </Col>
       <Col>
@@ -29,7 +27,6 @@ export default function About() {
       </p>
       </Col>
     </Row>
-    </Container>
     </section>
   )
 }

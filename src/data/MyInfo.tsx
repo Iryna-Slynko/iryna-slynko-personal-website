@@ -8,6 +8,31 @@ export default function MyInfo(): IInfo {
     education: EducationExperience(),
     projects: Projects(),
     jobs: WorkExperience(),
-    skills: []
+    skills: [
+      {
+        "skill": "Python",
+        "level": 8
+      },
+      {
+        "skill": "JavaScript",
+        "level": 7
+      },
+      {
+        "skill": "Java",
+        "level": 6
+      },
+      {
+        "skill": "React",
+        "level": 2
+      },
+      {
+        "skill": "CSS",
+        "level": 8
+      },
+      {
+        "skill": "C#",
+        "level": 5
+      }
+    ]
   };
 }

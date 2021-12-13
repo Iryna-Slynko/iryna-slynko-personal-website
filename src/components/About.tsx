@@ -29,9 +29,9 @@ export default function About() {
       </p>
       <Row>
         <Col>
-        </Col>
-        <Col>
           <Button variant="secondary" href="Iryna-Slynko.pdf" target='_blank'>Download My Resume</Button>
+        </Col>
+        <Col className='d-flex'>
         </Col>
       </Row>
       </Col>

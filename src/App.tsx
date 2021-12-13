@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Hobbies from './components/Hobbies';
 import Resume from './components/Resume';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import {
   library
@@ -22,6 +24,14 @@ library.add(
 )
 
 const hero = <section className="hero bg-dark">
+  <Container className="center-text">
+    <Row className="align-items-end">
+      <Col>
+        <h1>Iryna Slynko</h1>
+        <h3>Final year Computer Science student.</h3>
+      </Col>
+    </Row>
+  </Container>
 </section>;
 
 function App() {

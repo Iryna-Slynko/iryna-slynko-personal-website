@@ -1,8 +1,8 @@
 .hero {
   height: 100vh;
   justify-content: center;
-  background: url(../images/hero11.jpg);
-  filter: grayscale(1);
+  background: url(../images/hero6.jpg);
+  filter: grayscale(0.7);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -15,6 +15,24 @@
   z-index: 4;
 }
 
-.sticky + main {
+.sticky+main {
   padding-top: 60px;
+}
+
+.center-text {
+  justify-content: center;
+  text-align: center;
+
+  .row {
+    height: 100%;
+  }
+
+  h1 {
+    font-size: calc(10vw);
+    opacity: 0.8;
+  }
+
+  h2 {
+    font-size: calc(5vw);
+  }
 }

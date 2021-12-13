@@ -2,7 +2,8 @@ import { format } from 'date-fns';
 import React from 'react';
 import { Technology } from '../types/Technology';
 import { IWorkExperience } from '../types/WorkExperience';
-import { generateAccordion, generateAccordionItem } from './generateAccordion';
+import { AccordionSection, generateAccordion} from './generateAccordion';
+import { MyAccordionItem } from "./AccordionItem";
 
 
 interface IProps {
@@ -33,13 +34,12 @@ export default class Work extends React.Component<IProps, IState> {
         default:
           date += format(work.endDate, "MMM yyyy");
       }
-      const title = work.companyName;
-      const subtitle = work.position;
-      const extraText = work.responsibilities;
-      return generateAccordionItem('work', index, title, subtitle, date, extraText);
+      return <MyAccordionItem date={date} subtitle={work.position} title={work.companyName} index={index} prefix='work'>
+        {work.responsibilities}
+      </MyAccordionItem>;
     })
-    return (
-      generateAccordion('experience', 'Experience', experience)
-    )
+    return <AccordionSection id='experience' title='Experience'>
+      {experience}
+    </AccordionSection>;
   }
 }

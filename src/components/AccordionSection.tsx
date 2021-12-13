@@ -7,35 +7,45 @@ import AccordionContext from 'react-bootstrap/AccordionContext';
 import Container from 'react-bootstrap/Container';
 
 export function generateAccordion(id: string, title: string, experience: JSX.Element[]) {
-  return <section id={id}>
+}
+
+interface IProps {
+  id: string,
+  title: string
+}
+
+export class AccordionSection  extends React.Component<IProps> {
+  render(){
+  return <section id={this.props.id}>
     <Row>
       <Col sm={3} md={2}>
         <h4>
           <span>
-            {title}
+            {this.props.title}
           </span>
         </h4>
       </Col>
       <Col>
         <Accordion>
-          {experience}
+          {this.props.children}
         </Accordion>
       </Col>
     </Row>
   </section>;
+  }
 }
 
 interface IParams {
-  children:string,
+  children: string,
   eventKey: string,
   subtitle: string
 }
-function ContextAwareToggle(params: IParams) {
+export function ContextAwareToggle(params: IParams) {
   const { activeEventKey } = useContext(AccordionContext);
 
   const decoratedOnClick = useAccordionButton(
     params.eventKey,
-    () => {},
+    () => { },
   );
 
   const isCurrentEventKey = activeEventKey === params.eventKey;
@@ -47,37 +57,19 @@ function ContextAwareToggle(params: IParams) {
       onClick={decoratedOnClick}
     >
       <Container>
-      <Row>
-        <Col xs={6} className='h5'>
-        {params.children}
-        </Col>
-        <Col xs={6} className='text-end h6'>
-          <span className='date'>
-        {isCurrentEventKey ? "" : params.subtitle}
-        </span>
-        </Col>
-      </Row>
+        <Row>
+          <Col xs={6} className='h5'>
+            {params.children}
+          </Col>
+          <Col xs={6} className='text-end h6'>
+            <span className='date'>
+              {isCurrentEventKey ? "" : params.subtitle}
+            </span>
+          </Col>
+        </Row>
       </Container>
     </button>
   );
 }
 
-export function generateAccordionItem(prefix: string, index: number, title: string, subtitle: string, date: string, extraText: string): JSX.Element {
 
-  return  <Accordion.Item key={title} eventKey={prefix + '-' + index.toString()}>
-  <ContextAwareToggle subtitle={date} eventKey={prefix + '-' + index.toString()}>{title}</ContextAwareToggle>
-  <Accordion.Body>
-    <h6>
-      <span className='title'>
-        {subtitle}</span><span>•</span>
-      <span className='date'>
-        {date}
-      </span>
-    </h6>
-    <p>
-      {extraText}
-    </p>
-  </Accordion.Body>
-</Accordion.Item>
-;
-}

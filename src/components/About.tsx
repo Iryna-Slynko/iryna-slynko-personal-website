@@ -3,7 +3,7 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
+import myphoto from "../images/hero10.jpg"
 
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
       <Container>
       <Row>
 <Col xs={6} md={4} lg={2}>
-      <Image src="images/main-photo.jfif" roundedCircle fluid className='profile-pic' alt='Iryna Slynko'/>
+      <Image src={myphoto} roundedCircle fluid className='profile-pic' alt='Iryna Slynko'/>
       </Col>
       <Col>
       <h2 className='justify'>

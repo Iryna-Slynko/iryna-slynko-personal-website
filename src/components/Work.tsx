@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import React from 'react';
 import { Technology } from '../types/Technology';
 import { IWorkExperience } from '../types/WorkExperience';
-import { AccordionSection, generateAccordion} from './generateAccordion';
+import { AccordionSection } from './AccordionSection';
 import { MyAccordionItem } from "./AccordionItem";
 
 

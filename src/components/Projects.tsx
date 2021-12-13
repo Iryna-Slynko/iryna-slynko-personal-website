@@ -25,7 +25,7 @@ export default function Projects() {
    
       <Container>
          <Row  className="justify-content-md-center">
-       <Col xs={3} md={2}>
+       <Col sm={3} md={2}>
         <h4>
           <span>
             Projects

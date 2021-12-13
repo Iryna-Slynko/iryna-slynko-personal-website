@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 export function generateAccordion(id: string, title: string, experience: JSX.Element[]) {
   return <section id={id}>
     <Row>
-      <Col xs={3} md={2}>
+      <Col sm={3} md={2}>
         <h4>
           <span>
             {title}

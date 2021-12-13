@@ -7,6 +7,8 @@
 @import "styles/About.scss";
 @import "styles/Resume.scss";
 @import "styles/Footer.scss";
+@import "styles/Hero.scss";
+@import "styles/Skills.scss";
 
 $primary: $accent-color;
 
@@ -26,25 +28,3 @@ body {
 }
 
 @import "~bootstrap/scss/bootstrap";
-
-
-.hero {
-  height: 100vh;
-  justify-content: center;
-  background: url(./images/hero6.jpg);
-  filter: grayscale(1);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 4;
-}
-
-.sticky + main {
-  padding-top: 60px;
-}

@@ -11,15 +11,14 @@ interface IProps {
 }
 
 interface IState {
-  readonly skills: ISkillInfo[],
   selectedSkill: Technology | null
 }
 
 export default class Skills extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
-    this.state = { skills: props.skills, selectedSkill: null };
     this.setActiveSkills = this.setActiveSkills.bind(this);
+    this.state = { selectedSkill: null };
   }
 
   setActiveSkills(skillName: Technology) {
@@ -31,7 +30,7 @@ export default class Skills extends React.Component<IProps, IState> {
   }
 
   render(): React.ReactNode {
-    const skills = this.state.skills.map((skill) => {
+    const skills = this.props.skills.map((skill) => {
       const spanClassName = skill.skill.toLowerCase() + ' level-' + skill.level.toString();
       const liClassName = skill.skill === this.state.selectedSkill ? "selected" : "";
       return (

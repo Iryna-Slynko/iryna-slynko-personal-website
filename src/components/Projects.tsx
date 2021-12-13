@@ -11,21 +11,13 @@ interface IProps {
 }
 
 interface IState {
-  readonly projects: IProject[],
   selectedSkill?: Technology
 }
 
 
 export default class Projects extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
-    super(props);
-    this.state = {
-      projects: props.projects
-    }
-  }
-
   render(): React.ReactNode {
-    const projectItems = this.state.projects.map((project, index) => {
+    const projectItems = this.props.projects.map((project, index) => {
       return <Carousel.Item key={project.title}>
         <img
           className="d-block"

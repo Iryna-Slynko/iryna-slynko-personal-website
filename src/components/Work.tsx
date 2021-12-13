@@ -11,21 +11,13 @@ interface IProps {
 }
 
 interface IState {
-  readonly jobs: IWorkExperience[],
   selectedSkill?: Technology
 }
 
 
 export default class Work extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
-    super(props);
-    this.state = {
-      jobs: props.jobs
-    }
-  }
-
   render(): React.ReactNode {
-    const experience = this.state.jobs.map(function (work, index) {
+    const experience = this.props.jobs.map(function (work, index) {
       let date = format(work.startDate, "MMM yyyy") + " - ";
       switch (work.endDate) {
         case 'Present':

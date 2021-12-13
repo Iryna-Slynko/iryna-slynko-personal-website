@@ -17,8 +17,9 @@ export default function About() {
         About Me
       </h2>
       <p>
-      Hi! My name is Iryna Slynko. I am a final year Computing student at Technological University Dublin as well as Level 8
-      Software Development student at National College of Ireland graduating in spring 2022.
+      Hi! My name is Iryna Slynko. I am a Final Year Computing student at Technological University Dublin. 
+         <br />
+        In March 2022 I am also graduating from National College of Ireland with Level 8 Higher Diploma in Science in Software Development. 
       <br />
       I have strong skills in Python, C#, JavaScript and SQL as well as learning Java, Spring Boot, Node.js, ReactJS, DevOps, GitOps and Cloud Computing.
       <br />

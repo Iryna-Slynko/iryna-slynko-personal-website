@@ -6,6 +6,8 @@ import { AccordionSection } from './AccordionSection';
 import { MyAccordionItem } from "./AccordionItem";
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 interface IProps {
   readonly education: IEducationExperience[],
@@ -16,9 +18,13 @@ export default class Education extends React.Component<IProps> {
     const experience = this.props.education.map(function (education, index) {
       const stageTabs = education.stages.map(function(stage) {
         const modules = stage.modules.map(function(m) {
-          return <li>
-            {m.title} {m.grade !== undefined ? " - " + m.grade : "" }
-          </li>;
+          return <Row>
+              <Col>
+            {m.title}
+            </Col><Col md={2}>
+             {m.grade}
+             </Col>
+            </Row>;
         });
         return <Tab eventKey={stage.stageName} title={stage.stageName}>
           {modules}

@@ -28,7 +28,7 @@ const hero = <section className="hero bg-dark">
     <Row className="align-items-end pb-5">
       <Col>
         <h1>Iryna Slynko</h1>
-        <h3>Software Development and IT Management final year student</h3>
+        <h3>Computer Science final year student</h3>
       </Col>
     </Row>
   </Container>

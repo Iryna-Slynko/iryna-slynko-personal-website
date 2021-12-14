@@ -23,7 +23,7 @@ export default function About() {
       <br />
       I have strong skills in Python, C#, JavaScript and SQL as well as learning Java, Spring Boot, Node.js, ReactJS, DevOps, GitOps and Cloud Computing.
       <br />
-      I possess excellent communication and people skills with a Bachelors degree in Psychology. I am a great team player as well as being an initiative individual contributor.
+      I possess excellent communication and people skills with a Bachelors degree in Psychology. I am a great team player as well as an initiative individual contributor.
       <br />
       I would love to take part in projects that would be challenging enough and help me grow my skills.
       </p>

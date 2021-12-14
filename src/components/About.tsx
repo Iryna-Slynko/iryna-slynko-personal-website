@@ -29,7 +29,7 @@ export default function About() {
       </p>
       <Row>
         <Col>
-          <Button variant="secondary" href="Iryna-Slynko.pdf" target='_blank'> <i class="fa fa-download" aria-hidden="true"></i> Download My Resume</Button>
+          <Button variant="secondary" href="Iryna-Slynko.pdf" target='_blank'> <i className="fa fa-download" aria-hidden="true"></i> Download My Resume</Button>
         </Col>
         <Col className='d-flex'>
         </Col>

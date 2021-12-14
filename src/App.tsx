@@ -14,13 +14,14 @@ import {
 } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
-  faHome
+  faHome, faDownload
 } from '@fortawesome/free-solid-svg-icons'
 import MyInfo from './data/MyInfo';
 
 library.add(
   fab,
-  faHome
+  faHome,
+  faDownload
 )
 
 const hero = <section className="hero bg-dark">

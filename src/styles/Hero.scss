@@ -2,7 +2,7 @@
   height: 100vh;
   justify-content: center;
   background: url(../images/hero6.jpg);
-  // filter: grayscale(0.7);
+  filter: grayscale(1);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -31,9 +31,6 @@
   }
 
   .col {
-    background: rgba($color: $inactive-accent-color, $alpha: 0.6);
-   
-
     h1 {
       font-size: calc(10vw);
 

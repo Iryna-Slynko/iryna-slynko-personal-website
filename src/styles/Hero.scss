@@ -2,7 +2,7 @@
   height: 100vh;
   justify-content: center;
   background: url(../images/hero6.jpg);
-  filter: grayscale(0.7);
+  // filter: grayscale(0.7);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -22,17 +22,26 @@
 .center-text {
   justify-content: center;
   text-align: center;
+  color: white;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
 
   .row {
     height: 100%;
   }
 
-  h1 {
-    font-size: calc(10vw);
-    opacity: 0.8;
+  .col {
+    background: rgba($color: $inactive-accent-color, $alpha: 0.6);
+   
+
+    h1 {
+      font-size: calc(10vw);
+
+    }
+
+    h3 {
+      font-size: calc(4vw);
+      opacity: 1;
+    }
   }
 
-  h2 {
-    font-size: calc(5vw);
-  }
 }

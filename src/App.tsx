@@ -24,8 +24,8 @@ library.add(
 )
 
 const hero = <section className="hero bg-dark">
-  <Container className="center-text">
-    <Row className="align-items-end">
+  <Container className="center-text vh-100 pb-5">
+    <Row className="align-items-end pb-5">
       <Col>
         <h1>Iryna Slynko</h1>
         <h3>Final year Computer Science student.</h3>

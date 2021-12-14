@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import myphoto from "../images/hero10.jpg"
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 export default function About() {
   return (
@@ -29,10 +30,8 @@ export default function About() {
       I would love to take part in projects that would be challenging enough and help me grow my skills.
       </p>
       <Row>
-        <Col>
-          <Button variant="secondary" href="Iryna-Slynko.pdf" target='_blank'> <FontAwesomeIcon icon=["fa", "fa-download"]/>Download My Resume</Button>
-        </Col>
-        <Col className='d-flex'>
+        <Col className="d-flex">
+          <Button variant="secondary" href="Iryna-Slynko.pdf" target='_blank'><span><FontAwesomeIcon className="pe-1" icon={faDownload} />Download Resume</span></Button>
         </Col>
       </Row>
       </Col>

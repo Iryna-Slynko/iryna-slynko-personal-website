@@ -9,13 +9,13 @@ export default function WorkExperience(): IWorkExperience[] {
     endDate: new Date(2021, 8, 10),
     technologies: ["Python", "React", "Jira", "Java", "JavaScript", "Git", "Spring MVC"],
     practices: ["Unit Testing", "Agile", "Code Review"],
-    responsibilities: "Delivered features for the web app solution as well as proposing improvement of " +
-      "onboarding and mentoring. Winner of Global Hackathon in Dublin. Top 10 in 2021 EMEA Secure Code Warrior Tournament."
+    responsibilities: "Delivered features for the web app solution. " +
+      "Winner of Global Hackathon in Dublin. Top 10 in 2021 EMEA Secure Code Warrior Tournament."
   },
   {
     companyName: "Verizon Media",
     website: new URL("https://ie.yahoo.com/"),
-    position: "Software Engineer Associate/Apprentice",
+    position: "Software Engineer Associate (Apprentice)",
     startDate: new Date(2021, 2, 1),
     endDate: new Date(2021, 5, 10),
     technologies: ["C#"],

@@ -13,7 +13,7 @@ export class AccordionSection  extends React.Component<IProps> {
   render(){
   return <section id={this.props.id}>
     <Row>
-      <Col sm={3} md={2}>
+      <Col  className="pb-5 text-left" sm={3} md={2}>
         <h4>
           <span>
             {this.props.title}

@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Image from 'react-bootstrap/Image';
 import { IProject } from '../types/Project';
 import { Technology } from '../types/Technology';
 
@@ -15,8 +16,7 @@ export default class Projects extends React.Component<IProps> {
   render(): React.ReactNode {
     const projectItems = this.props.projects.map((project, index) => {
       return <Carousel.Item key={project.title}>
-        <img
-          className="d-block"
+        <Image fluid
           src={"images/portfolio/" + project.image}
           alt={project.title}
         />
@@ -32,7 +32,7 @@ export default class Projects extends React.Component<IProps> {
      
         <Container>
            <Row  className="justify-content-md-center">
-         <Col sm={3} md={2}>
+         <Col  className="pb-5 text-left" sm={3} md={2}>
           <h4>
             <span>
               Projects

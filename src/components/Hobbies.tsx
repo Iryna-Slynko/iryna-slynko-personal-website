@@ -10,7 +10,7 @@ function ImageMagnifier({
   width,
   height,
   magnifierHeight = 12,
-  magnifierWidth: magnifierWidth = 12,
+  magnifierWidth = 12,
   zoomLevel = 4
 }: {
   src: string;

@@ -22,8 +22,6 @@ export default class Projects extends React.Component<IProps> {
         />
         <Carousel.Caption>
           <a href={project.url} target="_blank" rel="noreferrer"><h3>{project.title}</h3></a>
-          <p>{project.description}</p>
-          <p>Technologies used: {project.technologies.join(', ')}</p>
         </Carousel.Caption>
       </Carousel.Item>
     });
@@ -31,7 +29,7 @@ export default class Projects extends React.Component<IProps> {
       <section id='projects'>
      
         <Container>
-           <Row  className="justify-content-md-center">
+           <Row >
          <Col  className="pb-5 text-left" sm={3} md={2}>
           <h4>
             <span>
@@ -39,7 +37,7 @@ export default class Projects extends React.Component<IProps> {
             </span>
           </h4>
         </Col>
-            <Col>
+            <Col sm={5}>
         <Carousel variant='dark'>
           {projectItems}
         </Carousel>

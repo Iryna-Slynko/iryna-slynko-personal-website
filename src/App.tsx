@@ -6,8 +6,6 @@ import Header from './components/Header';
 import Hobbies from './components/Hobbies';
 import Resume from './components/Resume';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 import {
   library
@@ -17,6 +15,7 @@ import {
   faHome, faDownload
 } from '@fortawesome/free-solid-svg-icons'
 import MyInfo from './data/MyInfo';
+import Hero from './components/Hero';
 
 library.add(
   fab,
@@ -24,22 +23,11 @@ library.add(
   faDownload
 )
 
-const hero = <section className="hero bg-dark">
-  <Container className="center-text vh-100 pb-5">
-    <Row className="align-items-end pb-5">
-      <Col>
-        <h1>Iryna Slynko</h1>
-        <h3>Computer Science final year student</h3>
-      </Col>
-    </Row>
-  </Container>
-</section>;
-
 function App() {
   return (
     <div id='home'>
       <Header />
-      {hero}
+      {Hero}
       <div>
         <main>
           <About />

@@ -36,6 +36,13 @@ export default function ProjectsData(): IProject[] {
       technologies: ["Tableau"],
       image: "CNCF_visualisation.png",
       url: "https://github.com/Iryna-Slynko/cncf-survey-visualisation"
+    },
+    {
+      title: "Split the Bill",
+      description: "Application to split the expenses from a single receipt. Upload the image, get unique link, share it and claim items",
+      technologies: ["Java", "Spring MVC", "JavaScript", "Bootstrap", "GitHub Actions", "Google Cloud Firestore", "Google Cloud Vision"],
+      image: "split-the-bill.png",
+      url: "https://github.com/Iryna-Slynko/split-the-bill"
     }
   ];
 }

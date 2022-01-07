@@ -27,7 +27,7 @@ function App() {
   return (
     <div id='home'>
       <Header />
-      {Hero}
+      <Hero />
       <div>
         <main>
           <About />

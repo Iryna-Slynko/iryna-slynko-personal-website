@@ -1,31 +1,29 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Accordion from 'react-bootstrap/Accordion';
 
-
 interface IProps {
   id: string,
   title: string
+  children: ReactNode
 }
 
-export class AccordionSection  extends React.Component<IProps> {
-  render(){
-  return <section id={this.props.id}>
+export function AccordionSection({ id, title, children }: IProps) {
+  return <section id={id}>
     <Row>
-      <Col  className="pb-5 text-left" sm={3} md={2}>
+      <Col className="pb-5 text-left" sm={3} md={2}>
         <h4>
           <span>
-            {this.props.title}
+            {title}
           </span>
         </h4>
       </Col>
       <Col>
         <Accordion>
-          {this.props.children}
+          {children}
         </Accordion>
       </Col>
     </Row>
   </section>;
-  }
 }

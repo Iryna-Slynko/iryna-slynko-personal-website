@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import type { ReactNode } from 'react';
+import { useContext } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import AccordionContext from 'react-bootstrap/AccordionContext';
@@ -13,32 +14,31 @@ interface IProps {
   subtitle: string;
   date: string;
   selected?: boolean;
+  children?: ReactNode;
 }
 
-export class MyAccordionItem extends React.Component<IProps> {
+export function MyAccordionItem({ prefix, index, title, subtitle, date, selected, children }: IProps) {
+  const eventKey = `${prefix}-${index}`;
 
-  render() {
-    return <Accordion.Item className={this.props.selected ? "selected" : ""} key={this.props.title + (this.props.selected ? "selected" : "")} eventKey={this.props.prefix + '-' + this.props.index.toString()}>
-      <ContextAwareToggle subtitle={this.props.date} eventKey={this.props.prefix + '-' + this.props.index.toString()}>{this.props.title}</ContextAwareToggle>
-      <Accordion.Body>
-        <h6>
-          <span className='title'>
-            {this.props.subtitle}</span><span>•</span>
-          <span className='date'>
-            {this.props.date}
-          </span>
-        </h6>
-        <p>
-          {this.props.children}
-        </p>
-      </Accordion.Body>
-    </Accordion.Item>;
-  }
+  return <Accordion.Item className={selected ? "selected" : ""} eventKey={eventKey}>
+    <ContextAwareToggle subtitle={date} eventKey={eventKey}>{title}</ContextAwareToggle>
+    <Accordion.Body>
+      <h6>
+        <span className='title'>
+          {subtitle}</span><span>•</span>
+        <span className='date'>
+          {date}
+        </span>
+      </h6>
+      <p>
+        {children}
+      </p>
+    </Accordion.Body>
+  </Accordion.Item>;
 }
-
 
 interface IParams {
-  children: string,
+  children: ReactNode,
   eventKey: string,
   subtitle: string
 }

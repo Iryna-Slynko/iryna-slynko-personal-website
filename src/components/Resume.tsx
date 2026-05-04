@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { IInfo } from '../types/Info';
 import { Technology } from '../types/Technology';
 import Education from './Education';
@@ -10,33 +10,19 @@ interface IProps {
   readonly info: IInfo,
 }
 
-interface IState {
-  selectedSkill: Technology | null;
-}
+export default function Resume({ info }: IProps) {
+  const [selectedSkill, setSelectedSkill] = useState<Technology | null>(null);
 
-export default class Resume extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
-    super(props);
-    this.state = {selectedSkill: null};
-    this.onSelectingItem = this.onSelectingItem.bind(this);
-  }
+  const onSelectingItem = (skill: Technology) => {
+    setSelectedSkill((current) => current === skill ? null : skill);
+  };
 
-  onSelectingItem(skill: Technology) {
-    if (skill === this.state.selectedSkill) {
-      this.setState({selectedSkill: null});
-    } else {
-      this.setState({selectedSkill: skill});
-    }
-  }
-
-  render(): React.ReactNode {
-    return (
-      <section id='resume'>
-        <Skills skills={this.props.info.skills} selectedSkill={this.state.selectedSkill} onSkillChange={this.onSelectingItem} />
-        <Work jobs={this.props.info.jobs} selectedSkill={this.state.selectedSkill} />
-        <Education education={this.props.info.education} />
-        <Projects projects={this.props.info.projects} selectedSkill={this.state.selectedSkill} />
-      </section>
-    )
-  }
+  return (
+    <section id='resume'>
+      <Skills skills={info.skills} selectedSkill={selectedSkill} onSkillChange={onSelectingItem} />
+      <Work jobs={info.jobs} selectedSkill={selectedSkill} />
+      <Education education={info.education} />
+      <Projects projects={info.projects} />
+    </section>
+  )
 }

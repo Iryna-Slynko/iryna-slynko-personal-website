@@ -32,9 +32,7 @@ export default class Resume extends React.Component<IProps, IState> {
   render(): React.ReactNode {
     return (
       <section id='resume'>
-        <Skills skills={this.props.info.skills} selectedSkill={this.state.selectedSkill} onSkillChange={this.onSelectingItem} />
         <Work jobs={this.props.info.jobs} selectedSkill={this.state.selectedSkill} />
-        <Education education={this.props.info.education} />
         <Projects projects={this.props.info.projects} selectedSkill={this.state.selectedSkill} />
       </section>
     )

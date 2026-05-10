@@ -59,7 +59,7 @@ export default function Footer() {
           Made with ❤️. Fuelled by ☕ and 🏋️
         </Row>
         <Row className="justify-content-center">
-          © Copyright 2022 Iryna Slynko
+          © Copyright {new Date().getFullYear()} Iryna Slynko
         </Row>
 
       </Container>

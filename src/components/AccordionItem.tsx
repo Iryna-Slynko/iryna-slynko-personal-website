@@ -1,4 +1,4 @@
-import React, { useContext, FC, ReactNode } from 'react';
+import React, { useContext, ReactNode } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import AccordionContext from 'react-bootstrap/AccordionContext';

@@ -18,7 +18,7 @@ interface IProps {
 export class MyAccordionItem extends React.Component<IProps> {
 
   render() {
-    return <Accordion.Item className={this.props.selected ? "selected" : ""} key={this.props.title + (this.props.selected ? "selected" : "")} eventKey={this.props.prefix + '-' + this.props.index.toString()}>
+    return <Accordion.Item className={this.props.selected? "selected" : ""} key={this.props.title + this.props.selected ? "selected" : ""} eventKey={this.props.prefix + '-' + this.props.index.toString()}>
       <ContextAwareToggle subtitle={this.props.date} eventKey={this.props.prefix + '-' + this.props.index.toString()}>{this.props.title}</ContextAwareToggle>
       <Accordion.Body>
         <h6>

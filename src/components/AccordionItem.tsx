@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, ReactNode } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import AccordionContext from 'react-bootstrap/AccordionContext';
@@ -13,6 +13,7 @@ interface IProps {
   subtitle: string;
   date: string;
   selected?: boolean;
+  children?: ReactNode;
 }
 
 export class MyAccordionItem extends React.Component<IProps> {

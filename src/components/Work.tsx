@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import React from 'react';
+import React, { JSX } from 'react';
 import { Technology } from '../types/Technology';
 import { IWorkExperience } from '../types/WorkExperience';
 import { AccordionSection } from './AccordionSection';

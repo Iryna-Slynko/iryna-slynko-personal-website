@@ -6,7 +6,8 @@ import Accordion from 'react-bootstrap/Accordion';
 
 interface IProps {
   id: string,
-  title: string
+  title: string,
+  children: React.ReactNode
 }
 
 export class AccordionSection  extends React.Component<IProps> {

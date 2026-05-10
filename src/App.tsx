@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import './App.scss';
 import About from './components/About';
 import Footer from './components/Footer';

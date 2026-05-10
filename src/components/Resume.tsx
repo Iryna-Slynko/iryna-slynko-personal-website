@@ -1,9 +1,7 @@
 import React from 'react';
 import { IInfo } from '../types/Info';
 import { Technology } from '../types/Technology';
-import Education from './Education';
 import Projects from './Projects';
-import Skills from './Skills';
 import Work from './Work';
 
 interface IProps {
